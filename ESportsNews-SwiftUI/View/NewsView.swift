@@ -23,12 +23,8 @@ struct NewsView: View {
             }.listStyle(.plain)
                 .navigationTitle("News")
                 .navigationBarTitleDisplayMode(.inline)
-            
         }
     }
-    
-   
-   
     
 }
 
