@@ -22,6 +22,10 @@ struct News: Decodable,Identifiable {
     var team:String
     var created_at:String
     var category_name: String
+    
+    var dateFormat:Date {
+        created_at.dateFormat()
+    }
 }
 
 
