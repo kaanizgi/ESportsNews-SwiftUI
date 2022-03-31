@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FFB4F50D27F5997700570095 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FFB4F50C27F5997700570095 /* SDWebImageSwiftUI */; };
+		FFB4F51027F59AF700570095 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4F50F27F59AF700570095 /* ListView.swift */; };
+		FFB4F51227F5A38800570095 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB4F51127F5A38800570095 /* DetailView.swift */; };
 		FFFE8DA627F4702B007F52B2 /* ESportsNews_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE8DA527F4702B007F52B2 /* ESportsNews_SwiftUIApp.swift */; };
-		FFFE8DA827F4702B007F52B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE8DA727F4702B007F52B2 /* ContentView.swift */; };
+		FFFE8DA827F4702B007F52B2 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE8DA727F4702B007F52B2 /* NewsView.swift */; };
 		FFFE8DAA27F4702C007F52B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFFE8DA927F4702C007F52B2 /* Assets.xcassets */; };
 		FFFE8DAD27F4702C007F52B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFFE8DAC27F4702C007F52B2 /* Preview Assets.xcassets */; };
+		FFFE8DB827F470FC007F52B2 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE8DB727F470FC007F52B2 /* NewsModel.swift */; };
+		FFFE8DBA27F47112007F52B2 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE8DB927F47112007F52B2 /* NewsViewModel.swift */; };
+		FFFE8DBC27F4712B007F52B2 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE8DBB27F4712B007F52B2 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FFB4F50F27F59AF700570095 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		FFB4F51127F5A38800570095 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FFFE8DA227F4702B007F52B2 /* ESportsNews-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESportsNews-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFFE8DA527F4702B007F52B2 /* ESportsNews_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESportsNews_SwiftUIApp.swift; sourceTree = "<group>"; };
-		FFFE8DA727F4702B007F52B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FFFE8DA727F4702B007F52B2 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		FFFE8DA927F4702C007F52B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFFE8DAC27F4702C007F52B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FFFE8DB727F470FC007F52B2 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		FFFE8DB927F47112007F52B2 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		FFFE8DBB27F4712B007F52B2 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		FFFE8DBD27F47733007F52B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +38,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB4F50D27F5997700570095 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FFB4F50E27F59AD200570095 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				FFB4F50F27F59AF700570095 /* ListView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		FFFE8D9927F4702B007F52B2 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +72,13 @@
 		FFFE8DA427F4702B007F52B2 /* ESportsNews-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FFFE8DBD27F47733007F52B2 /* Info.plist */,
+				FFB4F50E27F59AD200570095 /* Component */,
+				FFFE8DB627F470E3007F52B2 /* Service */,
+				FFFE8DB527F470A9007F52B2 /* ViewModel */,
+				FFFE8DB427F470A5007F52B2 /* View */,
+				FFFE8DB327F4709F007F52B2 /* Model */,
 				FFFE8DA527F4702B007F52B2 /* ESportsNews_SwiftUIApp.swift */,
-				FFFE8DA727F4702B007F52B2 /* ContentView.swift */,
 				FFFE8DA927F4702C007F52B2 /* Assets.xcassets */,
 				FFFE8DAB27F4702C007F52B2 /* Preview Content */,
 			);
@@ -65,6 +91,39 @@
 				FFFE8DAC27F4702C007F52B2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FFFE8DB327F4709F007F52B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE8DB727F470FC007F52B2 /* NewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFFE8DB427F470A5007F52B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE8DA727F4702B007F52B2 /* NewsView.swift */,
+				FFB4F51127F5A38800570095 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFFE8DB527F470A9007F52B2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE8DB927F47112007F52B2 /* NewsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFFE8DB627F470E3007F52B2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FFFE8DBB27F4712B007F52B2 /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +142,9 @@
 			dependencies = (
 			);
 			name = "ESportsNews-SwiftUI";
+			packageProductDependencies = (
+				FFB4F50C27F5997700570095 /* SDWebImageSwiftUI */,
+			);
 			productName = "ESportsNews-SwiftUI";
 			productReference = FFFE8DA227F4702B007F52B2 /* ESportsNews-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +173,9 @@
 				Base,
 			);
 			mainGroup = FFFE8D9927F4702B007F52B2;
+			packageReferences = (
+				FFB4F50B27F5997700570095 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = FFFE8DA327F4702B007F52B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFFE8DA827F4702B007F52B2 /* ContentView.swift in Sources */,
+				FFFE8DB827F470FC007F52B2 /* NewsModel.swift in Sources */,
+				FFFE8DA827F4702B007F52B2 /* NewsView.swift in Sources */,
+				FFB4F51027F59AF700570095 /* ListView.swift in Sources */,
+				FFB4F51227F5A38800570095 /* DetailView.swift in Sources */,
 				FFFE8DA627F4702B007F52B2 /* ESportsNews_SwiftUIApp.swift in Sources */,
+				FFFE8DBC27F4712B007F52B2 /* WebService.swift in Sources */,
+				FFFE8DBA27F47112007F52B2 /* NewsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +340,7 @@
 				DEVELOPMENT_TEAM = M9MHSW8NNM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ESportsNews-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +370,7 @@
 				DEVELOPMENT_TEAM = M9MHSW8NNM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ESportsNews-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FFB4F50B27F5997700570095 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FFB4F50C27F5997700570095 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFB4F50B27F5997700570095 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FFFE8D9A27F4702B007F52B2 /* Project object */;
 }
