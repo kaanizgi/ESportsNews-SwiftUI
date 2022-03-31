@@ -14,18 +14,18 @@ struct NewsView: View {
     
     var body: some View {
         NavigationView {
-            List(ViewModel.NewsList) { item in
-                NavigationLink(destination: DetailView(data: item)) {
-                    ListView(data: item)
-                }.listRowInsets(EdgeInsets())
-            }.task {
-                await ViewModel.getNews()
-            }.listStyle(.plain)
-                .navigationTitle("News")
+            ScrollView(.vertical) {
+                ForEach(ViewModel.NewsList) {item in
+                    NavigationLink(destination: DetailView(data: item)) {
+                        ListView(data: item)
+                    }.buttonStyle(PlainButtonStyle())
+                }
+            }.navigationTitle("News")
                 .navigationBarTitleDisplayMode(.inline)
+        }.task {
+            await ViewModel.getNews()
         }
     }
-    
 }
 
 struct NewsViewPreviews: PreviewProvider {
