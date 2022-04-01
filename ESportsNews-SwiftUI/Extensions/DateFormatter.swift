@@ -12,7 +12,6 @@ extension DateFormatter {
         print("Initializing DateFormatter")
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd/yyyy"
-
         return formatter
     }()
 }
@@ -20,7 +19,6 @@ extension DateFormatter {
 extension String {
     func dateFormat() -> Date {
         guard let parsedDate = DateFormatter.allNumericUSA.date(from: self) else { return Date() }
-
         return parsedDate
     }
 }
