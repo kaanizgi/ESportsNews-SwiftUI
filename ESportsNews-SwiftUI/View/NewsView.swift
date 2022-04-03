@@ -36,8 +36,6 @@ struct NewsView: View {
                 }
             }.navigationTitle("News")
                 .navigationBarTitleDisplayMode(.inline)
-        }.task {
-            await ViewModel.getNews(category: "")
         }
     }
 }
