@@ -16,26 +16,20 @@ struct NewsView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
-                TextField("Search", text: $search,onCommit: {
-                    Task.init {
-                        await ViewModel.getNews(category:search)
-                    }
-                })
-                .padding()
-                .textFieldStyle(.plain)
-                .frame(height:40)
-                .frame(maxWidth:.infinity)
-                .background(.secondary)
-                .cornerRadius(16)
-                .padding()
-                
                 ForEach(ViewModel.NewsList) {item in
                     NavigationLink(destination: DetailView(data: item)) {
                         ListView(data: item)
                     }.buttonStyle(PlainButtonStyle())
                 }
+                .searchable(text: $search,prompt:"Search Category")
+                .disableAutocorrection(true)
+                .onChange(of: search) { searchText in
+                        Task.init {
+                            await ViewModel.getNews(category:searchText)
+                        }
+                    }
             }.navigationTitle("News")
-                .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
